@@ -1,16 +1,10 @@
-@import "assets/css/main.css";
+@import "./main.css";
 
 /* ============ */
 /* Hero section */
 /* ============ */
 .hero-section {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 50%;
   height: 100vh;
-  padding-right: var(--big-padding);
-  padding-left: var(--big-padding);
   background-color: var(--background-color);
   color: var(--white);
 }
@@ -18,14 +12,6 @@
 /* ====== */
 /* Navbar */
 /* ====== */
-nav {
-  z-index: 10;
-  width: 100%;
-  min-height: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 /* ============ */
 /* Hero content */
@@ -36,8 +22,8 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 .hero-content > p {
   margin-bottom: var(--medium-margin);
@@ -49,14 +35,9 @@ nav {
 .secondary-slogan {
   color: var(--low-opacity-white);
   font-weight: lighter;
-  font-size: var(--medium-font);
   text-align: left;
 }
 
-.main-slogan {
-  font-size: var(--big-font);
-  font-weight: normal;
-}
 /* ===================== */
 /* Scroll down indicator */
 /* ===================== */
@@ -67,16 +48,13 @@ nav {
   align-items: center;
   justify-content: flex-start;
 }
-#scroll-down > .secondary-slogan {
-  font-size: var(--small-font);
-}
 
 #inicator {
   margin-right: var(--small-margin);
   position: relative;
   width: 30px;
   height: 50px;
-  border: 2px solid var(--white);
+  border: 2px solid var(--low-opacity-white);
   border-radius: 50px;
   box-sizing: border-box;
 }
@@ -88,7 +66,7 @@ nav {
   width: 6px;
   height: 6px;
   margin-left: -3px;
-  background-color: var(--white);
+  background-color: var(--low-opacity-white);
   border-radius: 100%;
   -webkit-animation: sdb10 2s infinite;
   animation: sdb10 2s infinite;
@@ -137,13 +115,7 @@ nav {
   align-items: center;
   min-height: 100vh;
   justify-content: space-between;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 50%;
   background-color: var(--contrast-color);
-  padding-right: var(--big-padding);
-  padding-left: var(--big-padding);
 }
 
 .image img {
@@ -164,15 +136,6 @@ nav {
 
 figure {
   overflow: hidden;
-}
-
-.zoom-in img {
-  transform: scale(1);
-  transition: 0.3s ease-in-out;
-}
-
-.zoom-in:hover img {
-  transform: scale(1.1);
 }
 
 .image-desription {
@@ -205,7 +168,6 @@ figure {
 
 .intro-text {
   color: var(--white);
-  font-size: var(--big-font);
 }
 
 .slider {
@@ -226,4 +188,131 @@ figure {
 .hide span {
   transform: translateY(100%);
   display: inline-block;
+}
+
+/* ========== */
+/* Responsive */
+/* ========== */
+@media only screen and (min-width: 769px) {
+  .hero-section {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+  }
+
+  .hero-content,
+  nav {
+    padding: var(--medium-padding);
+  }
+
+  .logo,
+  .secondary-slogan {
+    font-size: var(--medium-font);
+  }
+
+  .menu-div,
+  .close {
+    font-size: var(--smaller-font);
+  }
+
+  .main-slogan {
+    font-size: var(--large-font);
+  }
+
+  .content {
+    width: 50%;
+    padding: 0 var(--big-padding);
+  }
+
+  .nav-links li a,
+  .intro-text {
+    font-size: var(--big-font);
+  }
+
+  .scroll-down-text {
+    font-size: var(--small-font);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-section {
+    width: 100%;
+    display: block;
+  }
+
+  nav,
+  .content {
+    padding: var(--big-padding);
+  }
+
+  .logo {
+    font-size: var(--small-font);
+  }
+
+  .main-slogan {
+    font-size: var(--big-font);
+  }
+
+  .secondary-slogan,
+  .intro-text,
+  .nav-links li a {
+    font-size: var(--medium-font);
+  }
+
+  .scroll-down-text {
+    font-size: var(--small-font);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .hero-section {
+    width: 100%;
+    display: block;
+  }
+
+  nav,
+  .hero-content,
+  .content {
+    padding: var(--medium-padding);
+  }
+
+  .logo,
+  .secondary-slogan,
+  .nav-links li a {
+    font-size: var(--small-font);
+  }
+
+  .main-slogan {
+    font-size: var(--medium-font);
+  }
+
+  .intro-text,
+  .scroll-down-text {
+    font-size: var(--smaller-font);
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .hero-section {
+    width: 100%;
+    display: block;
+  }
+
+  nav,
+  .hero-content,
+  .content {
+    padding: var(--medium-padding);
+  }
+
+  .logo,
+  .secondary-slogan,
+  .nav-links li a,
+  .intro-text {
+    font-size: var(--smaller-font);
+  }
+
+  .main-slogan {
+    font-size: var(--small-font);
+  }
 }

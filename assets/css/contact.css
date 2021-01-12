@@ -1,8 +1,13 @@
-@import "assets/css/main.css";
+@import "./main.css";
 
 /* ====== */
 /* Navbar */
 /* ====== */
+
+body {
+  height: 100vh;
+}
+
 nav {
   width: 100%;
   min-height: 5rem;
@@ -25,9 +30,7 @@ nav {
   align-items: center;
   justify-content: center;
   grid-area: contact-me;
-  font-size: var(--big-font);
   color: var(--white);
-  padding: var(--big-padding);
 }
 .contact-form {
   display: flex;
@@ -35,8 +38,6 @@ nav {
   justify-content: flex-start;
   flex-direction: column;
   grid-area: contact-form;
-  padding-left: var(--big-padding);
-  padding-right: var(--big-padding);
   color: var(--white);
 }
 
@@ -68,7 +69,7 @@ nav {
 }
 
 .contact-form input:focus {
-  border-bottom: 2px solid #1a883f;
+  border-bottom: 2px solid var(--form-hover);
 }
 
 .contact-form textarea {
@@ -85,7 +86,7 @@ nav {
 }
 
 .contact-form textarea:focus {
-  border-bottom: 2px solid #1a883f;
+  border-bottom: 2px solid var(--form-hover);
 }
 
 .contact-form button {
@@ -103,4 +104,75 @@ nav {
 
 .contact-form button:hover {
   background-color: var(--form-hover);
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    padding: 0 var(--big-padding);
+  }
+
+  .nav-links li a {
+    font-size: var(--big-font);
+  }
+
+  .logo {
+    font-size: var(--medium-font);
+  }
+
+  .contact-form {
+    width: 50%;
+    padding: 0 var(--big-padding);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 0 var(--medium-padding);
+  }
+
+  .nav-links li a {
+    font-size: var(--medium-font);
+  }
+
+  .logo {
+    font-size: var(--small-font);
+  }
+
+  .contact-form {
+    width: 70%;
+    padding: 0 var(--medium-padding);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .logo {
+    font-size: var(--small-font);
+  }
+
+  .nav-links li a {
+    font-size: var(--medium-font);
+  }
+
+  .contact-form {
+    width: 80%;
+    padding: 0 var(--small-padding);
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .logo {
+    font-size: var(--smaller-font);
+  }
+
+  .nav-links li a {
+    font-size: var(--small-font);
+  }
+
+  .contact-me {
+    font-size: var(--small-font);
+  }
+
+  .contact-form {
+    width: 100%;
+  }
 }

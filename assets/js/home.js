@@ -1,45 +1,45 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.fromTo(
   ".lm",
-  { rotationX: -20, rotationY: -15 },
+  { rotationX: -10, rotationY: -5 },
   {
     scrollTrigger: {
       trigger: ".lm",
       start: "top center",
       scrub: 3,
     },
-    rotationX: 20,
-    rotationY: 15,
+    rotationX: 10,
+    rotationY: 5,
     duration: 2,
     ease: "power1.out",
   }
 );
 gsap.fromTo(
   ".db",
-  { rotationX: -20, rotationY: -15 },
+  { rotationX: -10, rotationY: -5 },
   {
     scrollTrigger: {
       trigger: ".db",
       start: "top center",
       scrub: 3,
     },
-    rotationX: 20,
-    rotationY: 15,
+    rotationX: 10,
+    rotationY: 5,
     duration: 2,
     ease: "power1.out",
   }
 );
 gsap.fromTo(
   ".mo",
-  { rotationX: -20, rotationY: -15 },
+  { rotationX: -10, rotationY: -5 },
   {
     scrollTrigger: {
       trigger: ".mo",
       start: "top center",
       scrub: 3,
     },
-    rotationX: 20,
-    rotationY: 15,
+    rotationX: 10,
+    rotationY: 5,
     duration: 2,
     ease: "power1.out",
   }
