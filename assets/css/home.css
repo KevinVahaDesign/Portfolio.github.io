@@ -134,8 +134,45 @@
   box-shadow: 10px 15px 13px 1px rgba(0, 0, 0, 0.3);
 }
 
+.zoom-in,
+.image-desription {
+  transition: 0.5s ease-in-out;
+}
+
 figure {
   overflow: hidden;
+}
+
+.zoom-in:hover {
+  transform: scale(1.1);
+}
+.zoom-in:hover ~ .image-desription {
+  transform: scale(1.1);
+}
+
+.overlay-img {
+  position: relative;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  padding: var(--small-padding);
+  font-size: var(--medium-font);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: var(--overlay-background);
+  transition: 0.5s ease;
+}
+
+.overlay-img:hover .overlay {
+  opacity: 1;
 }
 
 .image-desription {

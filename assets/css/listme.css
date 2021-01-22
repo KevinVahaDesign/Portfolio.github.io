@@ -1,0 +1,152 @@
+@import "./main.css";
+
+nav {
+  width: 100%;
+  min-height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: var(--big-padding);
+  padding-right: var(--big-padding);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+.text-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-image p {
+  font-size: var(--medium-font);
+  color: var(--white);
+}
+
+.right-img {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo,
+  .text-image p {
+    font-size: var(--medium-font);
+  }
+
+  nav {
+    padding: 0 var(--big-padding);
+  }
+
+  .text-image {
+    padding: var(--big-padding);
+  }
+
+  .nav-links li a {
+    font-size: var(--big-font);
+  }
+
+  .left,
+  .right-img {
+    margin: var(--big-margin) var(--medium-margin);
+  }
+
+  .right,
+  .left,
+  .text-image p,
+  .text-image img {
+    width: 45%;
+  }
+
+  .big {
+    width: 40%;
+  }
+
+  .title {
+    padding: var(--big-padding) 0;
+    font-size: var(--big-font);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 0 var(--medium-padding);
+  }
+
+  .nav-links li a {
+    font-size: var(--medium-font);
+  }
+
+  .logo,
+  .text-image p {
+    font-size: var(--small-font);
+  }
+
+  nav {
+    padding: 0 var(--big-padding);
+  }
+
+  .nav-links li a {
+    font-size: var(--big-font);
+  }
+
+  .right,
+  .left,
+  .right-img,
+  .text-image {
+    margin: var(--medium-margin) 0;
+  }
+
+  .text-image {
+    flex-direction: column;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .text-image p {
+    padding: var(--medium-padding);
+  }
+
+  .right,
+  .left,
+  .text-image p,
+  .text-image img {
+    width: 100%;
+  }
+
+  .title {
+    font-size: var(--small-font);
+    padding: var(--medium-padding) 0;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .logo {
+    font-size: var(--small-font);
+  }
+
+  .nav-links li a {
+    font-size: var(--medium-font);
+  }
+
+  .title,
+  .text-image p {
+    font-size: var(--smaller-font);
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .logo {
+    font-size: var(--smaller-font);
+  }
+
+  .nav-links li a {
+    font-size: var(--small-font);
+  }
+}

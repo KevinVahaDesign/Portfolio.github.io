@@ -3,6 +3,7 @@
 /* ====== */
 :root {
   --background-color: #131b28;
+  --overlay-background: rgba(19, 27, 40, 0.7);
   --secondary-color: #233758;
   --contrast-color: #f24452;
   --form-hover: #f0293a;
