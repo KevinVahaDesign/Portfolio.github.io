@@ -34,6 +34,12 @@ nav {
   justify-content: flex-end;
 }
 
+.mb,
+.si,
+.ev {
+  opacity: 0;
+}
+
 @media only screen and (min-width: 768px) {
   .logo,
   .text-image p {
@@ -100,7 +106,7 @@ nav {
   .left,
   .right-img,
   .text-image {
-    margin: var(--medium-margin) 0;
+    margin: var(--small-margin) 0;
   }
 
   .text-image {
@@ -142,6 +148,10 @@ nav {
 }
 
 @media only screen and (max-width: 375px) {
+  nav {
+    padding: var(--medium-padding);
+  }
+
   .logo {
     font-size: var(--smaller-font);
   }

@@ -47,6 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding: var(--big-padding) 0;
 }
 
 #inicator {
@@ -325,7 +326,8 @@ figure {
   }
 
   .intro-text,
-  .scroll-down-text {
+  .scroll-down-text,
+  .overlay {
     font-size: var(--smaller-font);
   }
 }
@@ -345,7 +347,8 @@ figure {
   .logo,
   .secondary-slogan,
   .nav-links li a,
-  .intro-text {
+  .intro-text,
+  .overlay {
     font-size: var(--smaller-font);
   }
 
